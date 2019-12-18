@@ -10,6 +10,8 @@ import './App.css';
 class App extends React.Component {
   constructor(props){
     super(props);
+
+    //todos containing pre defined todos
     this.state = {
       todos : [
         {
@@ -31,6 +33,9 @@ class App extends React.Component {
     }
   }
   
+
+  //change completed state based on check event 
+  
   markCompleted = (id) => {
     this.setState({
       todos : this.state.todos.map(todo => 
@@ -45,6 +50,7 @@ class App extends React.Component {
   
   }
 
+  //delete todo object on click of delete button
   delTodo = (id) => {
     this.setState({
       todos : [...this.state.todos.filter(todo => 
@@ -53,11 +59,13 @@ class App extends React.Component {
   }
 
 
+
+  //add todo item to todos from form 
   addTodo = (title) =>{
   const newtodo = new newTodo(Math.floor(Math.random() * 100),title);
  this.setState({
    todos : [...this.state.todos , newtodo]
- });
+ }); 
   
   }
   
@@ -76,6 +84,8 @@ class App extends React.Component {
    }
 }
 
+
+//class to create todo object
 class newTodo{
   constructor(id,title,completed=false){
     this.id=id

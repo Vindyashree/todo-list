@@ -1,36 +1,41 @@
 import React from 'react';
+import { withTheme } from '@material-ui/core';
+import IconButton from '@material-ui/core/IconButton';
+import DeleteIcon from '@material-ui/icons/Delete';
+
+
+
+
 class TodoItem extends React.Component{
+    //cancel the todo if completed is true
     getstyle = () =>{
         return {
-            backgroundColor : 'blue',
-            padding : '20px',
+           
             textDecoration : this.props.completed ? 'line-through':'none',
-            width : '50%',
-            border: "2px solid black",
-            marginTop:"20px"
+           
         }
     }
   
   
     render(){
         return (
-            <center><div style = {this.getstyle() } class="Item">
+            
+         <div style = {this.getstyle() } class="Item">
                
-            <input type = 'checkbox' checked= {this.props.completed} onChange = {this.props.markCompleted.bind
-                    (this,this.props.id)}/>
+            <input type = 'checkbox' checked= {this.props.completed} 
+            onChange = {this.props.markCompleted.bind
+                    (this,this.props.id)}
+                    />
                <span> {this.props.title}</span> 
-             
-                <button onClick = {this.props.delTodo.bind
-                    (this,this.props.id)} style = {btnstyle}>x</button>
-            </div></center>
+             <IconButton aria-label="delete" onClick ={this.props.delTodo.bind
+                    (this,this.props.id)}  class = "btnstyle">
+                 <DeleteIcon />
+             </IconButton>
+                    
+        </div>
         );
     }
 }
-const btnstyle = {
-    backgroundColor : 'red',
-    padding : '5px 10px',
-    borderRadius : '50%',
-    float : 'right'
-}
+
 
 export default TodoItem;
