@@ -26,11 +26,11 @@ class TodoItem extends React.Component{
         <Checkbox checked= {this.props.completed} 
             onChange = {this.props.markCompleted.bind
                 (this,this.props.id)}
-                 value="gilad" />
+         />
                
          
                <span> {this.props.title}</span> 
-             <IconButton aria-label="delete" onClick ={this.props.delTodo.bind
+             <IconButton  onClick ={this.props.delTodo.bind
                     (this,this.props.id)}  class = "btnstyle">
                  <DeleteIcon />
              </IconButton>

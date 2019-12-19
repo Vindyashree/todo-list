@@ -22,9 +22,7 @@ export default function Todoheader() {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar variant="dense">
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <MenuIcon />
-          </IconButton>
+        
           <Typography variant="h6" color="inherit">
            Todo List App
           </Typography>

@@ -1,6 +1,7 @@
 .App {
  
   margin-top:20px;
+
  
 }
 .Item{
@@ -11,13 +12,18 @@
   font-size: larger;
   margin-bottom: 20px;
   padding:10px;
+
+  font-family:'Lakki Reddy', 'Shadows Into Light','Ma Shan Zheng', cursive;
   
   
 }
 .btnstyle {
   float : right;
-  color: rgb(168, 17, 17); 
-  margin-right: 5px;
+  color: white; 
+  background-color:red;
+  border-radius:50%;
+  height:40px;
+
  
 }
 

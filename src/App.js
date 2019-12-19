@@ -63,9 +63,12 @@ class App extends React.Component {
   //add todo item to todos from form 
   addTodo = (title) =>{
   const newtodo = new newTodo(Math.floor(Math.random() * 100),title);
- this.setState({
+  if(newtodo.title.trim()!==""){
+    this.setState({
    todos : [...this.state.todos , newtodo]
- }); 
+ });
+  }
+  
   
   }
   

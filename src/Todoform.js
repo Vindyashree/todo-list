@@ -32,7 +32,7 @@ class Todoform extends React.Component{
 
                 <TextField id="standard-basic" label="Add Todo"
                 value = {this.state.title}
-                onChange={this.onChange}
+                onChange={this.onChange} required
                />
                
               <Fab color="primary" aria-label="add" type="submit">
