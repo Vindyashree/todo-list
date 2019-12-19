@@ -19,12 +19,8 @@
 }
 .btnstyle {
   float : right;
-  color: white; 
-  background-color:red;
-  border-radius:50%;
-  height:40px;
-
- 
+  color: rgb(184, 32, 32); 
+ border:0px;
 }
 
 
