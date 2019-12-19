@@ -1,7 +1,8 @@
 import React from 'react';
-import { withTheme } from '@material-ui/core';
 import IconButton from '@material-ui/core/IconButton';
 import DeleteIcon from '@material-ui/icons/Delete';
+
+import Checkbox from '@material-ui/core/Checkbox';
 
 
 
@@ -21,11 +22,13 @@ class TodoItem extends React.Component{
         return (
             
          <div style = {this.getstyle() } class="Item">
-               
-            <input type = 'checkbox' checked= {this.props.completed} 
+
+        <Checkbox checked= {this.props.completed} 
             onChange = {this.props.markCompleted.bind
-                    (this,this.props.id)}
-                    />
+                (this,this.props.id)}
+                 value="gilad" />
+               
+         
                <span> {this.props.title}</span> 
              <IconButton aria-label="delete" onClick ={this.props.delTodo.bind
                     (this,this.props.id)}  class = "btnstyle">
